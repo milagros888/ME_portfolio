@@ -11,7 +11,10 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">Milagros Escarlon</a>
+      <a class="brand" href="#home">
+        <span class="logo" aria-hidden="true">ME</span>
+        <span class="brand-text">Milagros Escarlon</span>
+      </a>
       <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">☰</button>
       <nav id="primaryNav" class="primary-nav" aria-label="Navegación principal">
         <ul>
@@ -26,75 +29,113 @@
 
   <main id="home" class="container main-content">
     <section id="hero" class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Milagros Escarlon</h1>
-      <p class="role">Desarrolladora Fullstack · QA Engineer · Técnica en Informática · Data Analytics</p>
-      <p class="hero-cta">Busco oportunidades en equipos de software donde aportar fullstack, testing y análisis de datos.</p>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Milagros Escarlon</h1>
+          <p class="role">Desarrolladora Fullstack · QA Engineer · Técnica en Informática · Data Analytics</p>
+          <p class="hero-cta">Busco oportunidades en equipos de software donde aportar fullstack, testing y análisis de datos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Contactame</a>
+            <button class="btn btn-outline" id="downloadCv" aria-label="Descargar CV" disabled>Descargar CV</button>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Simple SVG ilustrativo estilo tech -->
+          <svg width="220" height="160" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <rect x="4" y="8" width="212" height="144" rx="10" fill="#071A2B" stroke="#163047" />
+            <g transform="translate(18,18)">
+              <rect x="0" y="0" width="70" height="28" rx="6" fill="#12324A" />
+              <rect x="80" y="0" width="100" height="28" rx="6" fill="#12324A" />
+              <rect x="0" y="40" width="180" height="18" rx="6" fill="#0E2433" />
+              <circle cx="20" cy="80" r="18" fill="#163047" />
+              <rect x="48" y="68" width="110" height="24" rx="6" fill="#0E2433" />
+            </g>
+          </svg>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="card" aria-labelledby="about-title">
+    <section id="about" class="card reveal" aria-labelledby="about-title">
       <h2 id="about-title">Sobre mí</h2>
       <p>Soy desarrolladora fullstack con experiencia en testing y análisis de datos. Me enfoco en código limpio, calidad y soluciones orientadas a resultados.</p>
     </section>
 
-    <section id="skills" class="card" aria-labelledby="skills-title">
+    <section id="skills" class="card reveal" aria-labelledby="skills-title">
       <h2 id="skills-title">Conocimientos</h2>
       <div class="skills-grid">
         <div>
           <h3>Lenguajes</h3>
-          <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-          </ul>
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+          </div>
         </div>
         <div>
           <h3>Frontend</h3>
-          <ul>
-            <li>React</li>
-            <li>HTML, CSS</li>
-          </ul>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
         </div>
         <div>
           <h3>Backend</h3>
-          <ul>
-            <li>Node.js</li>
-          </ul>
+          <div class="chips"><span class="chip">Node.js</span></div>
         </div>
         <div>
           <h3>Bases de datos</h3>
-          <ul>
-            <li>MongoDB</li>
-            <li>SQL Server, MySQL</li>
-          </ul>
+          <div class="chips">
+            <span class="chip">MongoDB</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">MySQL</span>
+          </div>
         </div>
         <div>
           <h3>Herramientas / DevOps</h3>
-          <ul>
-            <li>Git, Cypress, Postman</li>
-            <li>Power BI, Azure DevOps, JIRA</li>
-          </ul>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">Cypress</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Azure DevOps</span>
+            <span class="chip">JIRA</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="card" aria-labelledby="projects-title">
+    <section id="projects" class="card reveal" aria-labelledby="projects-title">
       <h2 id="projects-title">Proyectos</h2>
-      <p class="muted">Aquí estarán mis proyectos. Por ahora, la sección está en construcción — pronto agregaré ejemplos con enlaces y descripciones.</p>
+      <p class="muted">Proyectos destacados — clic en una tarjeta para ver más (próximamente).</p>
       <div class="projects-grid" aria-live="polite">
-        <article class="project-card" aria-labelledby="proj-cinema-title">
+        <article class="project-card" aria-labelledby="proj-cinema-title" tabindex="0">
           <h3 id="proj-cinema-title">Cinema Ticket Booking</h3>
           <p class="project-desc">Aplicación sobre la compra y venta de entradas de cine.</p>
-          <p class="project-meta"><span class="status status-wip" aria-hidden="false">En progreso</span></p>
+          <div class="project-meta">
+            <div class="chips small">
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+            </div>
+            <span class="status status-wip" aria-hidden="false">En progreso</span>
+          </div>
         </article>
 
-        <article class="project-card" aria-labelledby="proj-ticketapp-title">
+        <article class="project-card" aria-labelledby="proj-ticketapp-title" tabindex="0">
           <h3 id="proj-ticketapp-title">TicketApp</h3>
           <p class="project-desc">Aplicación sobre la compra y venta de entradas para partidos de fútbol. Se encuentra inspirada en el mundial 2026.</p>
-          <p class="project-meta"><span class="status status-complete" aria-hidden="false">Completado</span></p>
+          <div class="project-meta">
+            <div class="chips small">
+              <span class="chip">MongoDB</span>
+              <span class="chip">Postman</span>
+            </div>
+            <span class="status status-complete" aria-hidden="false">Completado</span>
+          </div>
         </article>
+
       </div>
     </section>
 
-    <section id="contact" class="card" aria-labelledby="contact-title">
+    <section id="contact" class="card reveal" aria-labelledby="contact-title">
       <h2 id="contact-title">Contacto</h2>
       <ul class="contact-list">
         <li>Email: <a href="mailto:milagrosescarln@yahoo.com.ar">milagrosescarln@yahoo.com.ar</a></li>
