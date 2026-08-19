@@ -43,6 +43,9 @@ body{
 .primary-nav a{color:var(--text);text-decoration:none;padding:0.5rem;border-radius:8px;display:block}
 .primary-nav a:hover, .primary-nav a:focus{background:rgba(255,255,255,0.02);outline:none}
 
+/* Header actions */
+.header-actions .btn{padding:0.35rem 0.6rem;font-size:0.88rem;border-radius:8px}
+
 /* Hero */
 .hero{padding:1.6rem 0}
 .hero-inner{display:flex;flex-direction:column;gap:1rem}
@@ -63,6 +66,11 @@ body{
 .chips{display:flex;flex-wrap:wrap;gap:0.4rem}
 .chips.small{gap:0.35rem}
 .chip{background:var(--glass);padding:0.28rem 0.6rem;border-radius:999px;font-size:0.85rem;color:var(--text);border:1px solid rgba(255,255,255,0.03)}
+
+/* Tools */
+.tool-icon{width:36px;height:36px;object-fit:contain;filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));border-radius:8px;background:rgba(255,255,255,0.02);padding:4px}
+.tool-name{font-weight:600;color:var(--text)}
+.tool{border-radius:8px}
 
 /* Projects */
 .projects-grid{display:grid;gap:0.75rem;margin-top:0.75rem}
@@ -98,3 +106,7 @@ body{
 
 /* Accessibility focus */
 a:focus, button:focus { outline: 3px solid rgba(47,128,237,0.25); outline-offset:2px; border-radius:6px; }
+
+@media (prefers-reduced-motion: reduce){
+  .project-card, .tool { transition: none !important; }
+}
